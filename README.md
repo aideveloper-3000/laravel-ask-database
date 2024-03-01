@@ -5,7 +5,11 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/beyondcode/laravel-ask-database/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/beyondcode/laravel-ask-database/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/beyondcode/laravel-ask-database.svg?style=flat-square)](https://packagist.org/packages/beyondcode/laravel-ask-database)
 
-> [!NOTE]  
+> [!NOTES]
+> The original package provided by [Beyond Code](https://github.com/beyondcode/laravel-ask-database) has been archived
+
+> As long as text-davinci-003 has been deprecated, this version supports another models. You can change it into `config/openai.php` file
+
 > This package is meant to be a learning resource for prompt engineering and how to achieve AI-generated query generation with PHP/Laravel. You should probably not use this in production
 
 
