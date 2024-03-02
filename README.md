@@ -34,6 +34,8 @@ php artisan vendor:publish --tag="ask-database-config"
 php artisan vendor:publish --provider="OpenAI\Laravel\ServiceProvider"
 ```
 
+What about accidental deletions, updates or inserts? By default it's protecting by enabling strict mode. You can disable it. Do this at your own risk
+
 ```php
 // config/ask-database.php
 

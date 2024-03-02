@@ -3,10 +3,14 @@
 use BeyondCode\Oracle\Exceptions\PotentiallyUnsafeQuery;
 use BeyondCode\Oracle\Oracle;
 
+function model() {
+    return config('ask-database.model');
+}
+
 it('can query openai for a query', function () {
     $queryPrompt = version_compare(app()->version(), '10', '>=') ? 'query-prompt-l10.txt' : 'query-prompt.txt';
     $client = mockClient('POST', 'completions', [[
-        'model' => 'text-davinci-003',
+        'model' => model(),
         'prompt' => rtrim(file_get_contents(__DIR__.'/Fixtures/'.$queryPrompt), PHP_EOL),
     ]], [completion('SELECT * FROM users;"')]);
 
@@ -21,10 +25,10 @@ it('can evaluate the returned query', function () {
     $resultPrompt = version_compare(app()->version(), '10', '>=') ? 'result-prompt-l10.txt' : 'result-prompt.txt';
 
     $client = mockClient('POST', 'completions', [[
-        'model' => 'text-davinci-003',
+        'model' => model(),
         'prompt' => rtrim(file_get_contents(__DIR__.'/Fixtures/'.$queryPrompt), PHP_EOL),
     ], [
-        'model' => 'text-davinci-003',
+        'model' => model(),
         'prompt' => rtrim(file_get_contents(__DIR__.'/Fixtures/'.$resultPrompt), PHP_EOL),
     ]], [
         completion('SELECT COUNT(*) FROM users;"'),
@@ -43,13 +47,13 @@ it('can query openai to find matching tables', function () {
     $tablePrompt = version_compare(app()->version(), '10', '>=') ? 'table-prompt-l10.txt' : 'table-prompt.txt';
 
     $client = mockClient('POST', 'completions', [[
-        'model' => 'text-davinci-003',
+        'model' => model(),
         'prompt' => rtrim(file_get_contents(__DIR__.'/Fixtures/'.$tablePrompt), PHP_EOL),
     ], [
-        'model' => 'text-davinci-003',
+        'model' => model(),
         'prompt' => rtrim(file_get_contents(__DIR__.'/Fixtures/filtered-query-prompt.txt'), PHP_EOL),
     ], [
-        'model' => 'text-davinci-003',
+        'model' => model(),
         'prompt' => rtrim(file_get_contents(__DIR__.'/Fixtures/filtered-result-prompt.txt'), PHP_EOL),
     ]], [
         completion('users,'),
@@ -66,7 +70,7 @@ it('can query openai to find matching tables', function () {
 it('throws an exception with strict mode enabled', function () {
     $fixture = version_compare(app()->version(), '10', '>=') ? 'query-prompt-l10.txt' : 'query-prompt.txt';
     $client = mockClient('POST', 'completions', [[
-        'model' => 'text-davinci-003',
+        'model' => model(),
         'prompt' => rtrim(file_get_contents(__DIR__.'/Fixtures/'.$fixture), PHP_EOL),
     ]], [
         completion('DROP TABLE users;"'),
