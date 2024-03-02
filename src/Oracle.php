@@ -49,7 +49,7 @@ class Oracle
     protected function queryOpenAi(string $prompt, string $stop, float $temperature = 0.0)
     {
         $completions = $this->client->completions()->create([
-            'model' => 'text-davinci-003',
+            'model' => config('ask-database.model'),
             'prompt' => $prompt,
             'temperature' => $temperature,
             'max_tokens' => 100,
