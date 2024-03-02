@@ -1,5 +1,5 @@
 {
-    "name": "beyondcode/laravel-ask-database",
+    "name": "sebacarrasco93/laravel-ask-database",
     "description": "Use natural language and AI to query your database from Laravel",
     "keywords": [
         "beyondcode",
@@ -12,6 +12,11 @@
         {
             "name": "Marcel Pociot",
             "email": "marcel@beyondco.de",
+            "role": "Developer"
+        },
+        {
+            "name": "Sebastián Carrasco",
+            "email": "seba@sextanet.com",
             "role": "Developer"
         }
     ],
