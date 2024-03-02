@@ -34,12 +34,24 @@ php artisan vendor:publish --tag="ask-database-config"
 php artisan vendor:publish --provider="OpenAI\Laravel\ServiceProvider"
 ```
 
+```php
+// config/ask-database.php
+
+'strict_mode' => env('ASK_DATABASE_STRICT_MODE', true),
+```
+
 ## Usage
 
-First, you need by and configure your OpenAI API key in your `.env` file:
+First, you to configure your OpenAI API key in your `.env` file:
 
 ```dotenv
 OPENAI_API_KEY=sk-...
+```
+
+By default it's using `gpt-3.5-turbo-instruct`. Optionally you can customize it
+
+```dotenv
+ASK_DATABASE_MODEL=gpt-3.5-turbo-instruct
 ```
 
 Then, you can use the `DB::ask()` method to ask the database:
