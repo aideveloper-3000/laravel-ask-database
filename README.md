@@ -24,7 +24,7 @@ DB::ask('How many users do we have on the "pro" plan?');
 Install the package via composer:
 
 ```bash
-composer require beyondcode/laravel-ask-database
+composer require sebacarrasco93/laravel-ask-database
 ```
 
 Publish the config files with:
