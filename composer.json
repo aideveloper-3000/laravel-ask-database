@@ -1,10 +1,11 @@
 {
-    "name": "sebacarrasco93/laravel-ask-database",
+    "name": "aideveloper-3000/laravel-ask-database",
     "description": "Use natural language and AI to query your database from Laravel",
     "keywords": [
         "beyondcode",
         "laravel",
-        "laravel-ask-database"
+        "laravel-ask-database",
+        "ai"
     ],
     "homepage": "https://github.com/beyondcode/laravel-ask-database",
     "license": "MIT",
@@ -15,8 +16,8 @@
             "role": "Developer"
         },
         {
-            "name": "Sebastián Carrasco",
-            "email": "seba@sextanet.com",
+            "name": "AI Developer 3000",
+            "email": "aideveloper-3000@gmail.com",
             "role": "Developer"
         }
     ],
