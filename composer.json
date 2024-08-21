@@ -49,13 +49,13 @@
     },
     "autoload": {
         "psr-4": {
-            "BeyondCode\\Oracle\\": "src",
-            "BeyondCode\\Oracle\\Database\\Factories\\": "database/factories"
+            "Aideveloper3000\\Oracle\\": "src",
+            "Aideveloper3000\\Oracle\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BeyondCode\\Oracle\\Tests\\": "tests"
+            "Aideveloper3000\\Oracle\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -74,10 +74,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "BeyondCode\\Oracle\\OracleServiceProvider"
+                "Aideveloper3000\\Oracle\\OracleServiceProvider"
             ],
             "aliases": {
-                "Oracle": "BeyondCode\\Oracle\\Facades\\Oracle"
+                "Oracle": "Aideveloper3000\\Oracle\\Facades\\Oracle"
             }
         }
     },
