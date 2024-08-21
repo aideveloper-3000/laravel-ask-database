@@ -24,7 +24,7 @@ DB::ask('How many users do we have on the "pro" plan?');
 Install the package via composer:
 
 ```bash
-composer require sebacarrasco93/laravel-ask-database
+composer require aideveloper-3000/laravel-ask-database
 ```
 
 Publish the config files with:
@@ -44,13 +44,13 @@ What about accidental deletions, updates or inserts? By default it's protecting 
 
 ## Usage
 
-First, you to configure your OpenAI API key in your `.env` file:
+First, you need to configure your OpenAI API key in your `.env` file:
 
 ```dotenv
 OPENAI_API_KEY=sk-...
 ```
 
-By default it's using `gpt-3.5-turbo-instruct`. Optionally you can customize it
+By default it's using `gpt-3.5-turbo-instruct`. Optionally, you can customize it
 
 ```dotenv
 ASK_DATABASE_MODEL=gpt-3.5-turbo-instruct
