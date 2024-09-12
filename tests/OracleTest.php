@@ -1,7 +1,7 @@
 <?php
 
-use BeyondCode\Oracle\Exceptions\PotentiallyUnsafeQuery;
-use BeyondCode\Oracle\Oracle;
+use Aideveloper3000\Oracle\Exceptions\PotentiallyUnsafeQuery;
+use Aideveloper3000\Oracle\Oracle;
 
 function model() {
     return config('ask-database.model');
