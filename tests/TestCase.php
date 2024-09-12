@@ -1,8 +1,8 @@
 <?php
 
-namespace BeyondCode\Oracle\Tests;
+namespace Aideveloper3000\Oracle\Tests;
 
-use BeyondCode\Oracle\OracleServiceProvider;
+use Aideveloper3000\Oracle\OracleServiceProvider;
 use OpenAI\Laravel\ServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 

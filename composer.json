@@ -1,10 +1,11 @@
 {
-    "name": "sebacarrasco93/laravel-ask-database",
+    "name": "aideveloper-3000/laravel-ask-database",
     "description": "Use natural language and AI to query your database from Laravel",
     "keywords": [
         "beyondcode",
         "laravel",
-        "laravel-ask-database"
+        "laravel-ask-database",
+        "ai"
     ],
     "homepage": "https://github.com/beyondcode/laravel-ask-database",
     "license": "MIT",
@@ -18,13 +19,18 @@
             "name": "Sebastián Carrasco",
             "email": "seba@sextanet.com",
             "role": "Developer"
+        },
+        {
+            "name": "AI Developer 3000",
+            "email": "aideveloper-3000@gmail.com",
+            "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.1",
-        "illuminate/contracts": "^10.0",
-        "illuminate/database": "^10.43",
-        "openai-php/laravel": "^0.3.1",
+        "illuminate/contracts": "^11.0",
+        "illuminate/database": "^11.0",
+        "openai-php/laravel": "^v0.10.1",
         "spatie/laravel-package-tools": "^1.14.0",
         "spatie/once": "^3.1"
     },
@@ -32,24 +38,24 @@
         "larastan/larastan": "^2.9",
         "laravel/pint": "^1.0",
         "mockery/mockery": "^1.5",
-        "nunomaduro/collision": "^6.0",
-        "orchestra/testbench": "^7.0|^8.0",
-        "pestphp/pest": "^1.21",
-        "pestphp/pest-plugin-laravel": "^1.1",
+        "nunomaduro/collision": "^v8.4.0",
+        "orchestra/testbench": "^v9.3.0",
+        "pestphp/pest": "^v2.35.1",
+        "pestphp/pest-plugin-laravel": "^v2.4.0",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "phpstan/phpstan-phpunit": "^1.0",
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^10.5.17"
     },
     "autoload": {
         "psr-4": {
-            "BeyondCode\\Oracle\\": "src",
-            "BeyondCode\\Oracle\\Database\\Factories\\": "database/factories"
+            "Aideveloper3000\\Oracle\\": "src",
+            "Aideveloper3000\\Oracle\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BeyondCode\\Oracle\\Tests\\": "tests"
+            "Aideveloper3000\\Oracle\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -62,16 +68,17 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "php-http/discovery": true
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "BeyondCode\\Oracle\\OracleServiceProvider"
+                "Aideveloper3000\\Oracle\\OracleServiceProvider"
             ],
             "aliases": {
-                "Oracle": "BeyondCode\\Oracle\\Facades\\Oracle"
+                "Oracle": "Aideveloper3000\\Oracle\\Facades\\Oracle"
             }
         }
     },
